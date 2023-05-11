@@ -45,19 +45,19 @@ function App() {
         <span className="popup__error update-input-error"></span>
       </PopupWithForm>
       <PopupWithForm isOpen={isEditProfilePopupOpen} onClose={closeAllPopups} name={"edit-profile"} titleText={"Редактировать профиль"} buttonText={"Сохранить"} children={"card"}>
-        <input required type="text" name="name" placeholder="Имя" id="name-input" minlength="2" maxlength="40" className="popup__input popup__input_type_name" />
+        <input required type="text" name="name" placeholder="Имя" id="name-input" minLength="2" maxLength="40" className="popup__input popup__input_type_name" />
         <span className="popup__error name-input-error"></span>
-        <input required type="text" name="about" placeholder="О себе" id="description-input" minlength="2" maxlength="200" className="popup__input popup__input_type_description" />
+        <input required type="text" name="about" placeholder="О себе" id="description-input" minLength="2" maxLength="200" className="popup__input popup__input_type_description" />
         <span className="popup__error description-input-error"></span>
       </PopupWithForm>
       <PopupWithForm isOpen={isAddPlacePopupOpen} onClose={closeAllPopups} name={"add-place"} titleText={"Новое место"} buttonText={"Создать"} children={"card"}>
-        <input required type="text" name="name" placeholder="Название" id="title-input" minlength="2" maxlength="30" className="popup__input popup__input_type_title" />
+        <input required type="text" name="name" placeholder="Название" id="title-input" minLength="2" maxLength="30" className="popup__input popup__input_type_title" />
         <span className="popup__error title-input-error"></span>
         <input required type="url" name="link" placeholder="Ссылка на картинку" id="link-input" className="popup__input popup__input_type_link" />
         <span className="popup__error link-input-error"></span>
       </PopupWithForm>
       <PopupWithForm name={"delete-card"} onClose={closeAllPopups} titleText={"Вы уверены?"} buttonText={"Да"} children={"card"}>
-        <input required type="text" name="name" placeholder="Название" id="title-input" minlength="2" maxlength="30" className="popup__input popup__input_type_title" />
+        <input required type="text" name="name" placeholder="Название" id="title-input" minLength="2" maxLength="30" className="popup__input popup__input_type_title" />
         <span className="popup__error title-input-error"></span>
         <input required type="url" name="link" placeholder="Ссылка на картинку" id="link-input" className="popup__input popup__input_type_link" />
         <span className="popup__error link-input-error"></span>
