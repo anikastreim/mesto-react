@@ -25,7 +25,7 @@ class Api {
     .then(this._checkResponse);
   }
 
-  updateProfileInfo({ name, about }) {
+  setUserInfo({ name, about }) {
     return fetch(`${this._baseUrl}/users/me`, {
       method: 'PATCH',
       headers: this._headers,
@@ -47,7 +47,7 @@ class Api {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: 'PATCH',
       headers: this._headers,
-      body: JSON.stringify({ avatar: avatar.link })
+      body: JSON.stringify({ avatar: avatar.avatar })
     })
     .then(this._checkResponse);
   }
@@ -74,6 +74,14 @@ class Api {
       headers: this._headers,
     })
     .then(this._checkResponse);
+  }
+
+  changeLikeCardStatus(cardId, isLiked) {
+    if (isLiked) {
+      return this.putLike(cardId)
+    } else {
+      return this.deleteLike(cardId)
+    }
   }
 }
 
