@@ -10,7 +10,7 @@ function Main({onEditAvatar, onEditProfile, onAddPlace, onCardClick, onCardLike,
       <section className="profile">
         <div className="profile__card">
           <button onClick={onEditAvatar} type="button" aria-label="edit profile image" className="profile__button">
-            <div style={{backgroundImage: `url(${currentUser.avatar})`}} className="profile__avatar" />
+            <img src={currentUser.avatar} alt="Аватар пользователя" className="profile__avatar" />
           </button>
           <div className="profile__info">
             <h1 className="profile__name">{currentUser.name}</h1>
